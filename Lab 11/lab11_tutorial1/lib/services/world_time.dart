@@ -25,7 +25,7 @@ class WordTime {
           Duration(minutes:
           int.parse(offsetMinutes), hours: int.parse(offsetHours)));
       time=DateFormat.jm().format(currenttime);
-    //  time = currenttime.toString();
+      //  time = currenttime.toString();
     }
     catch (e) {
       print('caught error: $e');
