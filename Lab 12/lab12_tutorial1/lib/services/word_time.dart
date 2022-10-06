@@ -12,10 +12,10 @@ class WordTime {
   WordTime({this.location, this.flag, this.url});
 
   Future<void> getTime() async {
-    try{Response response = await get(
-        Uri.parse('http://worldtimeapi.org/api/timezone/$url')); // Asia/Kolkata
-    Map timeData = jsonDecode(response.body);
-
+    try {
+      Response response = await get(Uri.parse(
+          'http://worldtimeapi.org/api/timezone/$url')); // Asia/Kolkata
+      Map timeData = jsonDecode(response.body);
 
       String dateTime = timeData['datetime'];
       String offset = timeData['utc_offset']; //not dst_offset
